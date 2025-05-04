@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PICT Student Clubs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 90%;
+        margin: auto;
+        padding-top: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .club {
+        background-color: white;
+        border-radius: 8px;
+        margin: 15px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .club img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .club-body {
+        padding: 20px;
+      }
+
+      .club-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .club-description {
+        margin-top: 10px;
+        color: #555;
+      }
+
+      .club-achievements {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      .club-achievements-content {
+        display: none;
+        padding: 10px;
+        background-color: #f9f9f9;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+
+      .club:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student Clubs & Extracurricular Activities</h1>
+
+      <div class="club">
+        <img
+          src="https://example.com/coding_club.jpg"
+          <!--
+          Replace
+          with
+          actual
+          image
+          URL
+          --
+        />
+        alt="Coding Club" />
+        <div class="club-body">
+          <div class="club-title">Coding Club</div>
+          <div class="club-description">
+            A platform for students passionate about coding and programming. The
+            club organizes coding competitions, hackathons, and collaborative
+            projects.
+          </div>
+          <div
+            class="club-achievements"
+            onclick="toggleAchievements('codingClub')"
+          >
+            Achievements
+          </div>
+          <div id="codingClub" class="club-achievements-content">
+            <ul>
+              <li>Winner of National Coding Challenge 2022</li>
+              <li>Organized 10+ hackathons in the past 2 years</li>
+              <li>50+ successful alumni from top tech companies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="club">
+        <img
+          src="https://example.com/robotics_club.jpg"
+          <!--
+          Replace
+          with
+          actual
+          image
+          URL
+          --
+        />
+        alt="Robotics Club" />
+        <div class="club-body">
+          <div class="club-title">Robotics Club</div>
+          <div class="club-description">
+            A club for students interested in robotics, where we design, build,
+            and compete with robots. We engage in national and international
+            robotics competitions.
+          </div>
+          <div
+            class="club-achievements"
+            onclick="toggleAchievements('roboticsClub')"
+          >
+            Achievements
+          </div>
+          <div id="roboticsClub" class="club-achievements-content">
+            <ul>
+              <li>Winner of RoboWars 2023</li>
+              <li>Participated in the International Robotics Challenge 2022</li>
+              <li>Built a fully autonomous drone</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="club">
+        <img
+          src="https://example.com/dance_club.jpg"
+          <!--
+          Replace
+          with
+          actual
+          image
+          URL
+          --
+        />
+        alt="Dance Club" />
+        <div class="club-body">
+          <div class="club-title">Dance Club</div>
+          <div class="club-description">
+            The Dance Club offers a platform for students to learn and perform
+            various dance styles. From classical to contemporary, we cover it
+            all.
+          </div>
+          <div
+            class="club-achievements"
+            onclick="toggleAchievements('danceClub')"
+          >
+            Achievements
+          </div>
+          <div id="danceClub" class="club-achievements-content">
+            <ul>
+              <li>Won Best Dance Performance at PICT Fest 2022</li>
+              <li>Hosted 20+ dance workshops</li>
+              <li>Represented PICT in National Dance Competitions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAchievements(club) {
+        var content = document.getElementById(club);
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

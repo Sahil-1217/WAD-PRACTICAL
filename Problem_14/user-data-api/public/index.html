@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User List</title>
+    <style>
+      table {
+        width: 60%;
+        margin: 30px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #aaa;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">User List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+
+    <script>
+      fetch("/api/users")
+        .then((res) => res.json())
+        .then((users) => {
+          document.getElementById("userTableBody").innerHTML = users
+            .map(
+              (user) => `
+          <tr>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.age}</td>
+          </tr>
+        `
+            )
+            .join("");
+        })
+        .catch((err) => console.error("Failed to load users:", err));
+    </script>
+  </body>
+</html>

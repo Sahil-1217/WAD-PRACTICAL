@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- jQuery Mobile CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <!-- About Page -->
+    <div data-role="page" id="about">
+      <div data-role="header">
+        <h1>About Me</h1>
+      </div>
+
+      <div class="ui-content">
+        <p>
+          Hello! I'm Sahil, a student at PICT pursuing B.E. in Computer
+          Engineering.
+        </p>
+        <p>
+          I love working on web projects and learning new technologies like
+          React, Node, and Spring Boot.
+        </p>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about" class="ui-btn-active">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Page -->
+    <div data-role="page" id="projects">
+      <div data-role="header">
+        <h1>Projects</h1>
+      </div>
+
+      <div class="ui-content">
+        <div data-role="collapsible">
+          <h4>MeddStack</h4>
+          <p>
+            Online pharmacy app using MERN Stack with socket-based live
+            notifications.
+          </p>
+        </div>
+
+        <div data-role="collapsible">
+          <h4>Zidio E-Commerce</h4>
+          <p>
+            Comic-themed e-commerce platform with product listing, admin
+            dashboard, and payments.
+          </p>
+        </div>
+
+        <div data-role="collapsible">
+          <h4>Cover Letter Generator</h4>
+          <p>
+            Next.js app using Google GenAI API to generate professional letters
+            based on resume input.
+          </p>
+        </div>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects" class="ui-btn-active">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Page -->
+    <div data-role="page" id="skills">
+      <div data-role="header">
+        <h1>Skills</h1>
+      </div>
+
+      <div class="ui-content">
+        <ul data-role="listview" data-inset="true">
+          <li>React, HTML5, CSS3</li>
+          <li>Node.js, Express.js</li>
+          <li>MongoDB, MySQL</li>
+          <li>Spring Boot (Java)</li>
+          <li>Git, Docker, AWS Free Tier</li>
+        </ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills" class="ui-btn-active">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div data-role="page" id="contact">
+      <div data-role="header">
+        <h1>Contact</h1>
+      </div>
+
+      <div class="ui-content">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+
+          <label for="msg">Message:</label>
+          <textarea id="msg"></textarea>
+
+          <button type="submit" class="ui-btn ui-btn-b" onclick="fun()">
+            Send
+          </button>
+        </form>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      // $(document).on("pageinit", "#contact", function () {
+      //   $("#contactForm").on("submit", function (e) {
+      //     e.preventDefault(); // Stop default form submission
+      //     alert("Message sent!");
+      //     this.reset(); // Clear the form
+      //   });
+      // });
+      function fun() {
+        alert("Submitted !!!");
+        document.getElementById("contactForm").reset();
+      }
+    </script>
+  </body>
+</html>
